@@ -20,6 +20,10 @@ a {
   color: inherit;
 }
 
+h4 {
+  color: white;
+}
+
 nav {
   position: relative;
   display: flex;
@@ -125,4 +129,66 @@ nav #right-nav span i:hover {
   cursor: pointer;
   background-color: #1fad95;
   color: white;
+}
+
+footer {
+  padding: 40px 0;
+  color: #696969;
+  background-color: #181722;
+}
+footer a {
+  transition: color 0.4s;
+}
+footer a:hover {
+  color: #1fad95;
+}
+footer #footer-container {
+  margin: auto;
+  max-width: 1200px;
+}
+footer #footer-container li {
+  margin: 10px 0;
+}
+footer #footer-container .top-footer {
+  display: flex;
+}
+footer #footer-container .top-footer #left-footer {
+  width: 50%;
+}
+footer #footer-container .top-footer #left-footer .contacts ul {
+  display: flex;
+}
+footer #footer-container .top-footer #left-footer .contacts ul li {
+  margin-right: 20px;
+  font-size: 20px;
+}
+footer #footer-container .top-footer #left-footer .contacts ul a:hover {
+  color: white;
+}
+footer #footer-container .top-footer #right-footer {
+  display: flex;
+  width: 50%;
+}
+footer #footer-container .top-footer #right-footer section {
+  margin: 0 40px;
+}
+footer #footer-container .top-footer #right-footer .explore h4 {
+  margin-bottom: 10px;
+}
+footer #footer-container .top-footer #right-footer .explore ul {
+  /* Chrome/Opera, Safari */
+  -moz-column-count: 2;
+  /* Mozilla Firefox */
+  column-count: 2;
+  /* Chrome/Opera, Safari */
+  -moz-column-gap: 40px;
+  /* Mozilla Firefox */
+  column-gap: 40px;
+}
+footer #footer-container .top-footer #right-footer .explore ul li {
+  margin-top: 0;
+}
+footer #footer-container .bottom-footer {
+  text-align: center;
+  padding-top: 50px;
 }

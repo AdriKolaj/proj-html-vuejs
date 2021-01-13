@@ -1,0 +1,81 @@
+$footerVPadding: 40px 0;
+$footerWidth: 1200px;
+$footerBackground: #181722;
+$leftWidth: 50%;
+$rightWidth: 50%;
+$contactsFontSize: 20px;
+$verticalMargin: 10px;
+$horizontalMargin: 0 15px;
+$columnsNumber: 2;
+$columnsGap: 40px;
+
+@mixin twoColumnsFooter {
+  -webkit-column-count: $columnsNumber;  /* Chrome/Opera, Safari */
+  -moz-column-count: $columnsNumber; /* Mozilla Firefox */
+  column-count: $columnsNumber;
+  -webkit-column-gap: $columnsGap; /* Chrome/Opera, Safari */
+  -moz-column-gap: $columnsGap; /* Mozilla Firefox */
+  column-gap: $columnsGap;
+}
+
+footer {
+  padding: $footerVPadding;
+  color: $footerGrey;
+  background-color: $footerBackground;
+  a {
+    transition: color 0.4s;
+    &:hover{
+      color: $brandGreen;
+    }
+  }
+
+  #footer-container {
+    margin: auto;
+    max-width: $footerWidth;
+
+    li {
+      margin: $verticalMargin 0;
+    }
+
+    .top-footer {
+      display: flex;
+      #left-footer {
+        width: $leftWidth;
+        .contacts {
+          ul {
+            display: flex;
+            li {
+              margin-right: 20px;
+              font-size: $contactsFontSize;
+            }
+            a:hover {
+              color: white;
+            }
+          }
+        }
+      }
+      #right-footer {
+        display: flex;;
+        width: $rightWidth;
+        section {
+          margin: 0 $columnsGap;
+        }
+        .explore h4 {
+          margin-bottom: $verticalMargin;
+        }
+        .explore ul {
+          @include twoColumnsFooter;
+          li {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .bottom-footer {
+      text-align: center;
+      padding-top: 50px;
+    }
+  }
+
+}
