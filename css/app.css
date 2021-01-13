@@ -1,1 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: lightgrey;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 15px;
+  color: #22272D;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  padding: 0 140px;
+}
+nav ul {
+  display: flex;
+}
+nav div {
+  display: flex;
+}
+nav #left-nav {
+  margin-right: auto;
+  color: #22272D;
+  font-weight: 500;
+}
+nav #left-nav li:not(:last-child) {
+  margin-right: 25px;
+}
+nav #left-nav li:not(:last-child) i {
+  margin-left: 5px;
+  font-size: 10px;
+}
+nav #left-nav li {
+  position: relative;
+  transition: color 0.4s;
+}
+nav #left-nav li:hover {
+  color: #1fad95;
+}
+nav #left-nav li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #1fad95;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+nav #left-nav li a:hover:before,
+nav #left-nav li a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav #central-nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+nav #central-nav img {
+  width: 160px;
+}
+nav #right-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: #22272D;
+  font-size: 17px;
+}
+nav #right-nav li {
+  padding: 10px;
+  transition: color 0.4s;
+}
+nav #right-nav li:hover {
+  cursor: pointer;
+  color: #1fad95;
+}
+nav #right-nav li:not(:first-child),
+nav #right-nav span {
+  margin-left: 5px;
+}
+nav #right-nav span {
+  border-radius: 5px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+nav #right-nav span input {
+  padding: 13px 15px;
+  border: none;
+  background-color: #F5F5F5;
+}
+nav #right-nav span input:focus {
+  outline: none;
+}
+nav #right-nav span i {
+  padding: 13px 10px;
+  color: #1fad95;
+  background-color: #F5F5F5;
+  transition: background-color 0.4s, color 0.4s;
+}
+nav #right-nav span i:hover {
+  cursor: pointer;
+  background-color: #1fad95;
+  color: white;
+}

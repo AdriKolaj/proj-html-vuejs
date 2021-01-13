@@ -1,0 +1,27 @@
+$fontFamily: 'Hind Siliguri', sans-serif;
+$fontSize: 15px;
+$fontMainColor: #22272D;
+$brandGreen: #1fad95;
+$brandDarkGrey: #6c6c6b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $fontMainColor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

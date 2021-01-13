@@ -1,0 +1,123 @@
+$navbarHeight: 70px;
+$navColor: white;
+$navPadding: 0 140px;
+$marginRightNav: 25px;
+$marginLeftNav: 5px;
+$chevronFont: 10px;
+$rightNavFont: 17px;
+$inputColor: #F5F5F5;
+
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $navbarHeight;
+  width: 100%;
+  background-color: $navColor;
+  padding: $navPadding;
+
+  ul {
+    display: flex;
+  }
+  div {
+    display: flex;
+  }
+
+  #left-nav {
+    margin-right: auto;
+    color: $fontMainColor;
+    font-weight: 500;
+    li:not(:last-child) {
+      margin-right: $marginRightNav;
+      i {
+        margin-left: 5px;
+        font-size: $chevronFont;
+      }
+    }
+    li {
+      position: relative;
+      transition: color 0.4s;
+      &:hover {
+        color: $brandGreen;
+      }
+      a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: $brandGreen;
+        visibility: hidden;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transition: .25s linear;
+      }
+      a:hover:before,
+      a:focus:before {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  #central-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    img {
+      width: 160px;
+    }
+  }
+
+  #right-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: $fontMainColor;
+    font-size: $rightNavFont;
+
+    li {
+      padding: 10px;
+      transition: color 0.4s;
+      &:hover {
+        cursor: pointer;
+        color: $brandGreen;
+      }
+    }
+    li:not(:first-child),
+    span {
+      margin-left: $marginLeftNav;
+    }
+    // Search section
+    span {
+      border-radius: 5px;
+      background-color: $inputColor;
+      overflow: hidden;
+
+      input {
+        padding: 13px 15px;
+        border: none;
+        background-color: $inputColor;
+        &:focus {
+          outline: none;
+        }
+      }
+      i {
+        padding: 13px 10px;
+        color: $brandGreen;
+        background-color: $inputColor;
+        transition: background-color 0.4s, color 0.4s;
+        &:hover {
+          cursor: pointer;
+          background-color: $brandGreen;
+          color: white;
+        }
+      }
+    }
+  }
+}
