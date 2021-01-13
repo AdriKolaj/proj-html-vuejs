@@ -9,123 +9,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Import FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
   </head>
-  <body>
-    <!-- Navbar section -->
-    <nav>
-      <div id="left-nav">
-        <ul>
-          <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#">Pages<i class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#">Courses<i class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#">Features<i class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#">Blog<i class="fas fa-chevron-down"></i></a></li>
-          <li><a href="#">Shop</a></li>
-        </ul>
-      </div>
-      <div id="central-nav">
-        <a href="#"><img src="img/dark-logo.png" alt="MaxCoach logo"></a>
-      </div>
-      <div id="right-nav">
-        <ul>
-          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-          <li><a href="#"><i class="far fa-user-circle"></i></a></li>
-        </ul>
-        <span>
-          <input type="text" name="search" placeholder="Search...">
-          <i class="fas fa-search"></i>
-        </span>
-
-      </div>
-    </nav>
-    <!-- /Navbar section -->
-    <!-- Main section -->
-    <main>
-      <div id="jumbotron">
-        <h3>Commence Business</h3>
-        <h1>Distant Mentoring Program</h1>
-        <a class="btn" href="#">Download free guidebook <i class="fas fa-long-arrow-alt-right"></i></a>
-      </div>
-
-      <div id="main-section">
-        <div class="container">
-
-          <!-- Prima sezione con testo a sx -->
-          <div class="left-exp">
-            <div class="left-part">
-              <h5>Everything in <strong>Maxcoach</strong></h5>
-              <h2>Learn about our <span class="special-title"> Work Culture</span> at MaxCoach</h2>
-              <p>Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month.</p>
-              <p class="CTA">Have questions? <span class="bold-green">Get Free Guide <i class="fas fa-long-arrow-alt-right"></i></span></p>
-            </div>
-            <div class="right-part">
-              <img class="main-img" src="img/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg" alt="work culture">
-              <img class="trans-img" src="img/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="about-us">
-              <img class="shape-first" src="img/maxcoach-shape-07.png" alt="shape">
-              <div class="circle-shape"></div>
-              <img class="shape-second" src="img/maxcoach-shape-02.png" alt="shape">
-            </div>
-          </div>
-          <!-- Prima sezione con testo a sx -->
-
+  <body >
+    <div id="root">
+      <!-- Navbar section -->
+      <nav>
+        <div id="left-nav">
+          <ul>
+            <li v-for = "nav in leftNavBarLinks"><a :href = nav.link>{{nav.name}}<i class="fas fa-chevron-down"></i></a></li>
+          </ul>
+        </div>
+        <div id="central-nav">
+          <a href="#"><img src="img/dark-logo.png" alt="MaxCoach logo"></a>
+        </div>
+        <div id="right-nav">
+          <ul>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a :href=accountLink><i class="far fa-user-circle"></i></a></li>
+          </ul>
+          <span>
+            <input type="text" name="search" placeholder="Search...">
+            <i class="fas fa-search"></i>
+          </span>
 
         </div>
-      </div>
+      </nav>
+      <!-- /Navbar section -->
+      <!-- Main section -->
+      <main>
+        <div id="jumbotron">
+          <h3>Commence Business</h3>
+          <h1>Distant Mentoring Program</h1>
+          <a class="btn" href="#">Download free guidebook <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
 
-    </main>
-    <!-- /Main section -->
-    <!-- Footer section -->
-    <footer>
-      <div id="footer-container">
-        <section class="top-footer">
-          <div id="left-footer">
-            <h4>Address</h4>
-            <section class="address">
-              <ul>
-                <li>382 NE 191st St # 87394 Miami, FL 33179-3899</li>
-                <li>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</li>
-                <li><a href="#">support@maxcoach.com<a></li>
-              </ul>
-            </section>
-            <section class="contacts">
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </section>
+        <div id="main-section">
+          <div class="container">
+
+            <!-- Prima sezione con testo a sx -->
+            <div class="left-exp">
+              <div class="left-part">
+                <h5>Everything in <strong>Maxcoach</strong></h5>
+                <h2>Learn about our <span class="special-title"> Work Culture</span> at MaxCoach</h2>
+                <p>Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We're opening new classes every beginning of each month.</p>
+                <p class="CTA">Have questions? <span class="bold-green">Get Free Guide <i class="fas fa-long-arrow-alt-right"></i></span></p>
+              </div>
+              <div class="right-part">
+                <img class="main-img" src="img/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg" alt="work culture">
+                <img class="trans-img" src="img/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="about-us">
+                <img class="shape-first" src="img/maxcoach-shape-07.png" alt="shape">
+                <div class="circle-shape"></div>
+                <img class="shape-second" src="img/maxcoach-shape-02.png" alt="shape">
+              </div>
+            </div>
+            <!-- Prima sezione con testo a sx -->
+
+
           </div>
-          <div id="right-footer">
-            <section class="explore">
-              <h4>Explore</h4>
-              <ul>
-                <li><a href="#">Start here</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Success story</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </section>
-            <section class="Information">
-              <h4>Information</h4>
-              <ul>
-                <li><a href="">Membership</a></li>
-                <li><a href="#">Purchase guide</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Terms of service</a></li>
-              </ul>
-            </section>
-          </div>
-        </section>
-        <section class="bottom-footer">
-          <div id="copyright">
-            <p>&copy; 2020 Maxcoach. All Rights Reserved</p>
-          </div>
-        </section>
-      </div>
-    </footer>
-    <!-- /Footer section -->
+        </div>
+
+      </main>
+      <!-- /Main section -->
+      <!-- Footer section -->
+      <footer>
+        <div id="footer-container">
+          <section class="top-footer">
+            <div id="left-footer">
+              <h4>Address</h4>
+              <section class="address">
+                <ul>
+                  <li>{{brandInfos.brandAddress}}</li>
+                  <li>{{brandInfos.phoneAndDays}}</li>
+                  <li><a href="#">{{brandInfos.emailAddress}}<a></li>
+                </ul>
+              </section>
+              <section class="contacts">
+                <ul>
+                  <li v-for="social in socialLinks"><a :href=social.link><i :class=social.icon></i></a></li>
+                </ul>
+              </section>
+            </div>
+            <div id="right-footer">
+              <section class="explore">
+                <h4>Explore</h4>
+                <ul>
+                  <li v-for="explorelink in exploreLinks"><a :href= explorelink.link>{{explorelink.name}}</a></li>
+                </ul>
+              </section>
+              <section class="Information">
+                <h4>Information</h4>
+                <ul>
+                  <li v-for="infolink in infoLinks"><a :href=infolink.link>{{infolink.name}}</a></li>
+                </ul>
+              </section>
+            </div>
+          </section>
+          <section class="bottom-footer">
+            <div id="copyright">
+              <p>&copy; {{yyyy}} Maxcoach. All Rights Reserved</p>
+            </div>
+          </section>
+        </div>
+      </footer>
+      <!-- /Footer section -->
+    </div>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>

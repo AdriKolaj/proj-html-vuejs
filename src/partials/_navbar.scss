@@ -29,11 +29,14 @@ nav {
     margin-right: auto;
     color: $fontMainColor;
     font-weight: 500;
-    li:not(:last-child) {
+    li {
       margin-right: $marginRightNav;
       i {
         margin-left: 5px;
         font-size: $chevronFont;
+      }
+      &:hover {
+        cursor: pointer;
       }
     }
     li {

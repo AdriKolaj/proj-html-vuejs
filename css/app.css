@@ -99,12 +99,15 @@ nav #left-nav {
   color: #22272D;
   font-weight: 500;
 }
-nav #left-nav li:not(:last-child) {
+nav #left-nav li {
   margin-right: 25px;
 }
-nav #left-nav li:not(:last-child) i {
+nav #left-nav li i {
   margin-left: 5px;
   font-size: 10px;
+}
+nav #left-nav li:hover {
+  cursor: pointer;
 }
 nav #left-nav li {
   position: relative;
