@@ -19,13 +19,40 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 35px;
+  margin-bottom: -25px;
+}
+
 h4 {
   color: white;
 }
 
 h5 {
+  font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #6c6c6b;
+}
+
+.special-title {
+  font-weight: 300;
+  color: #1fad95;
+}
+
+p {
   color: #6c6c6b;
 }
 
@@ -40,6 +67,15 @@ h5 {
 .btn:hover {
   color: white;
   background-color: #1fad95;
+}
+
+.bold-green {
+  font-weight: bold;
+  color: #1fad95;
+}
+
+.CTA {
+  margin-top: 30px;
 }
 
 nav {
@@ -149,6 +185,11 @@ nav #right-nav span i:hover {
   color: white;
 }
 
+main .container {
+  margin: 0 auto;
+  padding: 120px 0 80px 0;
+  width: 65%;
+}
 main #jumbotron {
   display: flex;
   flex-direction: column;
@@ -159,13 +200,50 @@ main #jumbotron {
   background-position: center;
   background-image: url("../img/home-3-hero-bg.jpg");
 }
-main h3 {
-  font-size: 35px;
-  margin-bottom: -25px;
+main #main-section .left-exp {
+  display: flex;
 }
-main h1 {
-  font-size: 65px;
-  font-weight: 400;
+main #main-section .left-exp .left-part {
+  width: 35%;
+  padding: 15px 20px;
+}
+main #main-section .left-exp .right-part {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 65%;
+}
+main #main-section .left-exp .right-part .main-img {
+  height: 90%;
+}
+main #main-section .left-exp .right-part .trans-img {
+  position: absolute;
+  height: 170px;
+  top: -55px;
+  right: -60px;
+}
+main #main-section .left-exp .right-part .shape-first {
+  position: absolute;
+  height: 100px;
+  top: -45px;
+  right: 50px;
+  z-index: -1;
+}
+main #main-section .left-exp .right-part .shape-second {
+  position: absolute;
+  height: 100px;
+  bottom: -50px;
+  right: 50px;
+}
+main #main-section .left-exp .right-part .circle-shape {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  border: 6px solid #ECC5AA;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 footer {

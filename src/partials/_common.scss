@@ -4,6 +4,10 @@ $fontMainColor: #22272D;
 $brandGreen: #1fad95;
 $footerGrey: #696969;
 $brandGrey: #6c6c6b;
+$hOneSize: 65px;
+$hTwoSize: 40px;
+$hThreeSize: 35px;
+$hFiveSize: 15px;
 
 * {
   margin: 0;
@@ -26,13 +30,40 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-size: $hOneSize;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: $hTwoSize;
+  line-height: $hTwoSize + 6px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: $hThreeSize;
+  margin-bottom: -25px;
+}
+
 h4 {
   color: white;
 }
 
 h5 {
+  font-size: $hFiveSize;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  color: $brandGrey;
+}
+
+.special-title {
+  font-weight: 300;
+  color: $brandGreen;
+}
+
+p {
   color: $brandGrey;
 }
 
@@ -47,4 +78,13 @@ h5 {
     color: white;
     background-color: $brandGreen;
   }
+}
+
+.bold-green {
+  font-weight: bold;
+  color: $brandGreen;
+}
+
+.CTA {
+  margin-top: 30px;
 }

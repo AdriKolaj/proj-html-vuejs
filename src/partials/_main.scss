@@ -1,9 +1,16 @@
-$hThreeSize: 35px;
-$hOneSize: 65px;
-
-
+$leftPartWidth: 35%;
+$rightPartWidth: 65%;
+$containerPadding: 120px 0 80px 0;
+$containerWidth: 65%;
+$circleShapeColor: #ECC5AA;
 
 main {
+
+  .container {
+    margin: 0 auto;
+    padding: $containerPadding;
+    width: $containerWidth;
+  }
 
   #jumbotron {
     display: flex;
@@ -16,12 +23,58 @@ main {
     background-image: url("../img/home-3-hero-bg.jpg");
   }
 
-  h3 {
-    font-size: $hThreeSize;
-    margin-bottom: -25px;
+  #main-section {
+
+    // First main section
+    .left-exp {
+      display: flex;
+      .left-part {
+        width: $leftPartWidth;
+        padding: 15px 20px;
+      }
+      .right-part {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: $rightPartWidth;
+        .main-img {
+          height: 90%;
+        }
+        .trans-img {
+          position: absolute;
+          height: 170px;
+          top: -55px;
+          right: -60px;
+        }
+        .shape-first {
+          position: absolute;
+          height: 100px;
+          top: -45px;
+          right: 50px;
+          z-index: -1;
+        }
+        .shape-second {
+          position: absolute;
+          height: 100px;
+          bottom: -50px;
+          right: 50px;
+        }
+        .circle-shape {
+          position: absolute;
+          top: 5px;
+          left: 50px;
+        	border: 6px solid $circleShapeColor;
+        	border-radius: 50%;
+        	width: 50px;
+        	height: 50px;
+        }
+      }
+    }
+    // /First main section
+
+
   }
-  h1 {
-    font-size: $hOneSize;
-    font-weight: 400;
-  }
+
+
 }
