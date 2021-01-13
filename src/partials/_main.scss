@@ -1,0 +1,27 @@
+$hThreeSize: 35px;
+$hOneSize: 65px;
+
+
+
+main {
+
+  #jumbotron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    color: white;
+    background-position: center;
+    background-image: url("../img/home-3-hero-bg.jpg");
+  }
+
+  h3 {
+    font-size: $hThreeSize;
+    margin-bottom: -25px;
+  }
+  h1 {
+    font-size: $hOneSize;
+    font-weight: 400;
+  }
+}

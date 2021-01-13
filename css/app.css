@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: lightgrey;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 15px;
   color: #22272D;
@@ -22,6 +21,25 @@ a {
 
 h4 {
   color: white;
+}
+
+h5 {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6c6c6b;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 12px 40px;
+  color: #1fad95;
+  background-color: white;
+  border-radius: 7px;
+  transition: color 0.4s, background-color 0.4s;
+}
+.btn:hover {
+  color: white;
+  background-color: #1fad95;
 }
 
 nav {
@@ -129,6 +147,25 @@ nav #right-nav span i:hover {
   cursor: pointer;
   background-color: #1fad95;
   color: white;
+}
+
+main #jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  color: white;
+  background-position: center;
+  background-image: url("../img/home-3-hero-bg.jpg");
+}
+main h3 {
+  font-size: 35px;
+  margin-bottom: -25px;
+}
+main h1 {
+  font-size: 65px;
+  font-weight: 400;
 }
 
 footer {

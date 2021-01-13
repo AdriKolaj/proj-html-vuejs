@@ -3,6 +3,7 @@ $fontSize: 15px;
 $fontMainColor: #22272D;
 $brandGreen: #1fad95;
 $footerGrey: #696969;
+$brandGrey: #6c6c6b;
 
 * {
   margin: 0;
@@ -11,7 +12,6 @@ $footerGrey: #696969;
 }
 
 body {
-  background-color: lightgrey;
   font-family: $fontFamily;
   font-size: $fontSize;
   color: $fontMainColor;
@@ -28,4 +28,23 @@ a {
 
 h4 {
   color: white;
+}
+
+h5 {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $brandGrey;
+}
+
+.btn {
+  font-weight: bold;
+  padding: 12px 40px;
+  color: $brandGreen;
+  background-color: white;
+  border-radius: 7px;
+  transition: color 0.4s, background-color 0.4s;
+  &:hover {
+    color: white;
+    background-color: $brandGreen;
+  }
 }
