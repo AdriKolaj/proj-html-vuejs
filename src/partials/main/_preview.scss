@@ -10,6 +10,13 @@ $cardHeight: 380px;
   text-align: center;
   padding: $previewVPadding;
   // background-color: #F6F6F6;
+
+  & .CTA {
+    width: 40%;
+    margin: auto;
+    padding: 20px 0 85px 0;
+    color: $brandGrey;
+  }
 }
 
 .cards-container {
@@ -88,4 +95,43 @@ $cardHeight: 380px;
   color: white;
   background-color: $brandOrange;
   transform: skew(0deg, 6deg);
+}
+
+.carousel {
+  ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    li {
+      padding: 0 7px;
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        font-size: 7px;
+        color: lightgrey;
+      }
+      .active {
+        font-size: 9px;
+        color: black;
+      }
+    }
+  }
+}
+
+.stripe {
+  background-color: #CCFFFF;
+  position: relative;
+}
+.stripe:before {
+    content:"";
+    background-image: linear-gradient(180deg, white, #F6F6F6);
+    position: absolute;
+    height: 600px;
+    bottom: 0;
+    width: 3200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    border-radius: 80%;
 }

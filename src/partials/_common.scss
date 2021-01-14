@@ -20,6 +20,7 @@ body {
   font-family: $fontFamily;
   font-size: $fontSize;
   color: $fontMainColor;
+  overflow-x: hidden;
 }
 
 ul {
@@ -78,19 +79,5 @@ p {
   &:hover {
     color: white;
     background-color: $brandGreen;
-  }
-}
-
-.bold-green {
-  font-weight: bold;
-  color: $brandGreen;
-}
-.bold-black {
-  font-weight: bold;
-  text-decoration: underline;
-  color: black;
-  transition: color 0.4s;
-  &:hover {
-    color: $brandGreen;
   }
 }

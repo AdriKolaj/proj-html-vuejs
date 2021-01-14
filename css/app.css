@@ -8,6 +8,7 @@ body {
   font-family: "Hind Siliguri", sans-serif;
   font-size: 15px;
   color: #22272D;
+  overflow-x: hidden;
 }
 
 ul {
@@ -67,21 +68,6 @@ p {
 .btn:hover {
   color: white;
   background-color: #1fad95;
-}
-
-.bold-green {
-  font-weight: bold;
-  color: #1fad95;
-}
-
-.bold-black {
-  font-weight: bold;
-  text-decoration: underline;
-  color: black;
-  transition: color 0.4s;
-}
-.bold-black:hover {
-  color: #1fad95;
 }
 
 nav {
@@ -321,6 +307,12 @@ nav #right-nav span i:hover {
   text-align: center;
   padding: 80px 0 0 0;
 }
+.preview .CTA {
+  width: 40%;
+  margin: auto;
+  padding: 20px 0 85px 0;
+  color: #6c6c6b;
+}
 
 .cards-container {
   display: flex;
@@ -399,6 +391,44 @@ nav #right-nav span i:hover {
   transform: skew(0deg, 6deg);
 }
 
+.carousel ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.carousel ul li {
+  padding: 0 7px;
+}
+.carousel ul li:hover {
+  cursor: pointer;
+}
+.carousel ul li i {
+  font-size: 7px;
+  color: lightgrey;
+}
+.carousel ul li .active {
+  font-size: 9px;
+  color: black;
+}
+
+.stripe {
+  background-color: #CCFFFF;
+  position: relative;
+}
+
+.stripe:before {
+  content: "";
+  background-image: linear-gradient(180deg, white, #F6F6F6);
+  position: absolute;
+  height: 600px;
+  bottom: 0;
+  width: 3200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+  border-radius: 80%;
+}
+
 main .container {
   margin: 0 auto;
   padding: 120px 0 80px 0;
@@ -412,10 +442,14 @@ main .circle-shape {
 }
 main .CTA {
   margin-top: 30px;
-  transition: color 0.4s;
 }
 main .CTA:hover {
   cursor: pointer;
+}
+main .CTA .bold-black {
+  transition: color 0.4s;
+}
+main .CTA .bold-black:hover {
   color: #1fad95;
 }
 main .greenCTA {
@@ -437,6 +471,21 @@ main .greenCTA:before {
 main .greenCTA:hover:before, main .greenCTA:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+main .bold-green {
+  font-weight: bold;
+  color: #1fad95;
+}
+main .bold-black {
+  padding-bottom: 0;
+  font-weight: bold;
+  border-bottom: 1px solid lightgrey;
+  color: black;
+  transition: color 0.4s, border-color 0.4;
+}
+main .bold-black:hover {
+  color: #1fad95;
+  border-color: #1fad95;
 }
 
 footer {

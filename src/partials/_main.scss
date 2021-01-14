@@ -24,10 +24,14 @@ main {
 
   .CTA {
     margin-top: 30px;
-    transition: color 0.4s;
     &:hover {
       cursor: pointer;
-      color: $brandGreen;
+    }
+    .bold-black {
+      transition: color 0.4s;
+      &:hover {
+        color: $brandGreen;
+      }
     }
   }
   .greenCTA {
@@ -52,6 +56,20 @@ main {
     }
   }
 
-
+  .bold-green {
+    font-weight: bold;
+    color: $brandGreen;
+  }
+  .bold-black {
+    padding-bottom: 0;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+    color: black;
+    transition: color 0.4s, border-color 0.4;
+    &:hover {
+      color: $brandGreen;
+      border-color: $brandGreen;
+    }
+  }
 
 }
