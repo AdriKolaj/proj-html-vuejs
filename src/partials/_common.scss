@@ -84,7 +84,12 @@ p {
   font-weight: bold;
   color: $brandGreen;
 }
-
-.CTA {
-  margin-top: 30px;
+.bold-black {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+  transition: color 0.4s;
+  &:hover {
+    color: $brandGreen;
+  }
 }

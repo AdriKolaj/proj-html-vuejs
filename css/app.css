@@ -74,8 +74,14 @@ p {
   color: #1fad95;
 }
 
-.CTA {
-  margin-top: 30px;
+.bold-black {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+  transition: color 0.4s;
+}
+.bold-black:hover {
+  color: #1fad95;
 }
 
 nav {
@@ -188,12 +194,7 @@ nav #right-nav span i:hover {
   color: white;
 }
 
-main .container {
-  margin: 0 auto;
-  padding: 120px 0 80px 0;
-  width: 65%;
-}
-main #jumbotron {
+#jumbotron {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,50 +204,155 @@ main #jumbotron {
   background-position: center;
   background-image: url("../img/home-3-hero-bg.jpg");
 }
-main #main-section .left-exp {
+
+#main-section .explanation {
   display: flex;
 }
-main #main-section .left-exp .left-part {
+#main-section .explanation .text-section {
   width: 35%;
-  padding: 15px 20px;
 }
-main #main-section .left-exp .right-part {
+#main-section .explanation .image-section {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   width: 65%;
 }
-main #main-section .left-exp .right-part .main-img {
+#main-section .explanation .left-txt {
+  padding: 15px 20px 15px 0;
+}
+#main-section .explanation .right-img {
+  justify-content: flex-end;
+}
+#main-section .explanation .right-img .main-img {
   height: 90%;
 }
-main #main-section .left-exp .right-part .trans-img {
+#main-section .explanation .right-img .trans-img {
   position: absolute;
   height: 170px;
   top: -55px;
   right: -60px;
 }
-main #main-section .left-exp .right-part .shape-first {
+#main-section .explanation .right-img .shape-square {
   position: absolute;
   height: 100px;
   top: -45px;
   right: 50px;
   z-index: -1;
 }
-main #main-section .left-exp .right-part .shape-second {
+#main-section .explanation .right-img .shape-circle-dot {
   position: absolute;
   height: 100px;
   bottom: -50px;
   right: 50px;
 }
-main #main-section .left-exp .right-part .circle-shape {
+#main-section .explanation .right-img .circle-shape {
   position: absolute;
   top: 5px;
   left: 50px;
+}
+#main-section .explanation .right-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-section .explanation .left-img {
+  justify-content: flex-start;
+}
+#main-section .explanation .left-img .main-img {
+  position: relative;
+  height: 90%;
+}
+#main-section .explanation .left-img .main-img:hover {
+  cursor: pointer;
+}
+#main-section .explanation .left-img .main-img .image {
+  height: 100%;
+}
+#main-section .explanation .left-img .main-img .yt-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 60px;
+}
+#main-section .explanation .left-img .shape-square {
+  position: absolute;
+  height: 125px;
+  bottom: -45px;
+  right: 65px;
+  z-index: -1;
+}
+#main-section .explanation .left-img .circle-shape {
+  position: absolute;
+  top: 0px;
+  right: -35px;
+}
+#main-section .explanation .left-img .shape-oval-dot {
+  position: absolute;
+  height: 140px;
+  top: 60px;
+  left: -85px;
+  z-index: -1;
+}
+#main-section .explanation .left-img .cloud-shape {
+  position: absolute;
+  height: 130px;
+  top: 30px;
+  left: -65px;
+  z-index: 1;
+  color: blue;
+}
+
+#main-section .statistics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+  text-align: center;
+}
+#main-section .statistics section {
+  padding: 0 50px;
+}
+
+main .container {
+  margin: 0 auto;
+  padding: 120px 0 80px 0;
+  width: 60%;
+}
+main .circle-shape {
   border: 6px solid #ECC5AA;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+}
+main .CTA {
+  margin-top: 30px;
+  transition: color 0.4s;
+}
+main .CTA:hover {
+  cursor: pointer;
+  color: #1fad95;
+}
+main .greenCTA {
+  position: relative;
+}
+main .greenCTA:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #1fad95;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+main .greenCTA:hover:before, main .greenCTA:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 footer {

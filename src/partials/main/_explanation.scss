@@ -1,0 +1,117 @@
+$textSectionWidth: 35%;
+$imageSectionWidth: 65%;
+$circleShapeColor: #ECC5AA;
+$rightTxtPadding: 15px 20px 15px 0;
+
+#main-section {
+
+  .explanation {
+    display: flex;
+    .text-section {
+      width: $textSectionWidth;
+    }
+    .image-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: $imageSectionWidth;
+    }
+
+    //Left TxT Part
+    .left-txt {
+      padding: $rightTxtPadding;
+    }
+
+    .right-img {
+      justify-content: flex-end;
+      .main-img {
+        height: 90%;
+      }
+      .trans-img {
+        position: absolute;
+        height: 170px;
+        top: -55px;
+        right: -60px;
+      }
+      .shape-square {
+        position: absolute;
+        height: 100px;
+        top: -45px;
+        right: 50px;
+        z-index: -1;
+      }
+      .shape-circle-dot {
+        position: absolute;
+        height: 100px;
+        bottom: -50px;
+        right: 50px;
+      }
+      .circle-shape {
+        position: absolute;
+        top: 5px;
+        left: 50px;
+      }
+    }
+    // /Left TxT Part
+
+    // Right TxT Part
+    .right-txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left-img {
+      justify-content: flex-start;
+      .main-img {
+        position: relative;
+        height: 90%;
+        &:hover {
+          cursor: pointer;
+        }
+        .image {
+          height: 100%;
+        }
+        .yt-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          height: 60px;
+        }
+      }
+      .shape-square {
+        position: absolute;
+        height: 125px;
+        bottom: -45px;
+        right: 65px;
+        z-index: -1;
+      }
+      .circle-shape {
+        position: absolute;
+        top: 0px;
+        right: -35px;
+      }
+      .shape-oval-dot {
+        position: absolute;
+        height: 140px;
+        top: 60px;
+        left: -85px;
+        z-index: -1;
+      }
+      .cloud-shape {
+        position: absolute;
+        height: 130px;
+        top: 30px;
+        left: -65px;
+        z-index: 1;
+        color: blue;
+      }
+    }
+    // /Right TxT Part
+
+
+  }
+
+
+}

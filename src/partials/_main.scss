@@ -1,8 +1,11 @@
-$leftPartWidth: 35%;
-$rightPartWidth: 65%;
+@import "main/_jumbotron";
+@import "main/_explanation";
+@import "main/_statistics";
+@import "main/_preview";
+
 $containerPadding: 120px 0 80px 0;
-$containerWidth: 65%;
-$circleShapeColor: #ECC5AA;
+$containerWidth: 60%;
+
 
 main {
 
@@ -12,69 +15,43 @@ main {
     width: $containerWidth;
   }
 
-  #jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    color: white;
-    background-position: center;
-    background-image: url("../img/home-3-hero-bg.jpg");
+  .circle-shape {
+    border: 6px solid $circleShapeColor;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
   }
 
-  #main-section {
-
-    // First main section
-    .left-exp {
-      display: flex;
-      .left-part {
-        width: $leftPartWidth;
-        padding: 15px 20px;
-      }
-      .right-part {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: $rightPartWidth;
-        .main-img {
-          height: 90%;
-        }
-        .trans-img {
-          position: absolute;
-          height: 170px;
-          top: -55px;
-          right: -60px;
-        }
-        .shape-first {
-          position: absolute;
-          height: 100px;
-          top: -45px;
-          right: 50px;
-          z-index: -1;
-        }
-        .shape-second {
-          position: absolute;
-          height: 100px;
-          bottom: -50px;
-          right: 50px;
-        }
-        .circle-shape {
-          position: absolute;
-          top: 5px;
-          left: 50px;
-        	border: 6px solid $circleShapeColor;
-        	border-radius: 50%;
-        	width: 50px;
-        	height: 50px;
-        }
-      }
+  .CTA {
+    margin-top: 30px;
+    transition: color 0.4s;
+    &:hover {
+      cursor: pointer;
+      color: $brandGreen;
     }
-    // /First main section
-
-
   }
+  .greenCTA {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: $brandGreen;
+      visibility: hidden;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: .25s linear;
+    }
+    &:hover:before,
+    &:focus:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
 
 
 }

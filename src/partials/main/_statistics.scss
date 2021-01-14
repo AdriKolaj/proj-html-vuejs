@@ -1,0 +1,18 @@
+$statisticsHPadding: 0 50px;
+$statisticsVPadding: 70px 0;
+
+#main-section {
+
+  .statistics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $statisticsVPadding;
+    text-align: center;
+    & section {
+      padding: $statisticsHPadding;
+    }
+  }
+
+
+}
