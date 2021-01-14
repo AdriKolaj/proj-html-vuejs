@@ -315,6 +315,90 @@ nav #right-nav span i:hover {
   padding: 0 50px;
 }
 
+.preview {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 0 0 0;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.card {
+  position: relative;
+  width: 31%;
+  height: 380px;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover > .card-img > img {
+  transform: scale(1.1);
+}
+.card .card-img {
+  overflow: hidden;
+}
+.card .card-img img {
+  width: 100%;
+  transform: scale(1);
+  transition: 1s ease-out;
+}
+.card .card-txt {
+  padding: 10px 20px 20px;
+  text-align: left;
+}
+.card .card-txt .course-price {
+  font-weight: bold;
+  font-size: 19px;
+  color: #1fad95;
+}
+.card .card-txt .smaller {
+  font-size: 14px;
+}
+.card .card-txt .course-name {
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.4s;
+}
+.card .card-txt .course-name:hover {
+  color: #1fad95;
+}
+.card .card-txt .other-infos {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 13px;
+  color: #6c6c6b;
+}
+.card .card-txt .other-infos span {
+  margin-right: 20px;
+}
+.card .card-txt .other-infos span i {
+  margin-right: 5px;
+}
+
+.free:after {
+  content: "FREE";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #EE7454;
+  transform: skew(0deg, 6deg);
+}
+
 main .container {
   margin: 0 auto;
   padding: 120px 0 80px 0;

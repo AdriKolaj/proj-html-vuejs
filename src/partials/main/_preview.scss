@@ -1,0 +1,91 @@
+$previewVPadding: 80px 0 0 0;
+$cardsWidth: 31%;
+$cardsPadding: 20px 0px;
+$cardTxtPadding: 10px 20px 20px;
+$cardHeight: 380px;
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: $previewVPadding;
+  // background-color: #F6F6F6;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $cardsPadding;
+}
+.card {
+  position: relative;
+  width: $cardsWidth;
+  height: $cardHeight;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover > .card-img > img {
+    transform: scale(1.1);
+  }
+
+  .card-img {
+    overflow: hidden;
+    img {
+      width: 100%;
+      transform: scale(1);
+      transition: 1s ease-out;
+    }
+  }
+
+  .card-txt {
+    padding: $cardTxtPadding;
+    text-align: left;
+    .course-price {
+      font-weight: bold;
+      font-size: 19px;
+      color: $brandGreen;
+    }
+    .smaller {
+      font-size: 14px;
+    }
+    .course-name {
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.4s;
+      &:hover {
+        color: $brandGreen;
+      }
+    }
+    .other-infos {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 13px;
+      color: $brandGrey;
+      span {
+        margin-right: 20px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.free:after {
+  content: "FREE";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: $brandOrange;
+  transform: skew(0deg, 6deg);
+}
