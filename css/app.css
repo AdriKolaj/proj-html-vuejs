@@ -70,6 +70,22 @@ p {
   background-color: #1fad95;
 }
 
+.inverted {
+  display: inline-block;
+  text-align: center;
+  width: 190px;
+  padding: 10px 40px;
+  margin-top: 25px;
+  color: white;
+  border: 2px solid #1fad95;
+  background-color: #1fad95;
+  transition: color 0.4s, background-color 0.4s;
+}
+.inverted:hover {
+  color: #1fad95;
+  background-color: white;
+}
+
 nav {
   position: relative;
   display: flex;
@@ -289,6 +305,89 @@ nav #right-nav span i:hover {
   z-index: 1;
   color: blue;
 }
+#main-section .explanation .centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-section .explanation .testimonial {
+  padding: 25px 45px;
+  width: 90%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.4);
+}
+#main-section .explanation .testimonial .bold-p {
+  font-size: 18px;
+}
+#main-section .explanation .testimonial p {
+  margin: 15px 0 35px;
+  font-size: 16px;
+}
+#main-section .explanation .testimonial .testimonial-profile {
+  display: flex;
+}
+#main-section .explanation .testimonial .testimonial-profile img {
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+#main-section .explanation .testimonial .testimonial-profile .test-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-section .explanation .testimonial .testimonial-profile .testimonial-name {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#main-section .explanation .testimonial .testimonial-profile .testimonial-job {
+  color: #6c6c6b;
+}
+#main-section .explanation .testimonial.main {
+  position: relative;
+  background-color: white;
+}
+#main-section .explanation .testimonial.behind {
+  padding: 20px 35px;
+  width: 70%;
+  position: absolute;
+  right: 45%;
+  transform: translateX(50%);
+  z-index: -1;
+  opacity: 0.4;
+}
+#main-section .explanation .behind.top {
+  top: -80px;
+}
+#main-section .explanation .behind.top .bold-p {
+  font-size: 14px;
+}
+#main-section .explanation .behind.top p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+#main-section .explanation .behind.bottom {
+  bottom: -55px;
+}
+#main-section .explanation .behind.bottom img {
+  height: 50px;
+}
+#main-section .explanation .behind.bottom .testimonial-name {
+  font-size: 13px;
+}
+#main-section .explanation .behind.bottom .testimonial-job {
+  font-size: 12px;
+}
+#main-section #testimonals {
+  margin-top: 140px;
+}
+#main-section #sixth {
+  margin: 150px 0;
+}
+#main-section #sixth .main-img {
+  height: 90%;
+}
 
 #main-section .statistics {
   display: flex;
@@ -355,12 +454,10 @@ nav #right-nav span i:hover {
 .card .card-txt .smaller {
   font-size: 14px;
 }
-.card .card-txt .course-name {
-  font-weight: bold;
-  font-size: 16px;
+.card .card-txt .bold-p {
   transition: color 0.4s;
 }
-.card .card-txt .course-name:hover {
+.card .card-txt .bold-p:hover {
   color: #1fad95;
 }
 .card .card-txt .other-infos {
@@ -414,6 +511,7 @@ nav #right-nav span i:hover {
 .stripe {
   background-color: #CCFFFF;
   position: relative;
+  margin-bottom: 80px;
 }
 
 .stripe:before {
@@ -471,6 +569,10 @@ main .greenCTA:before {
 main .greenCTA:hover:before, main .greenCTA:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+main .bold-p {
+  font-weight: bold;
+  font-size: 16px;
 }
 main .bold-green {
   font-weight: bold;

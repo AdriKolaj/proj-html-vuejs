@@ -59,9 +59,7 @@ $cardHeight: 380px;
     .smaller {
       font-size: 14px;
     }
-    .course-name {
-      font-weight: bold;
-      font-size: 16px;
+    .bold-p {
       transition: color 0.4s;
       &:hover {
         color: $brandGreen;
@@ -122,6 +120,7 @@ $cardHeight: 380px;
 .stripe {
   background-color: #CCFFFF;
   position: relative;
+  margin-bottom: 80px;
 }
 .stripe:before {
     content:"";

@@ -81,3 +81,18 @@ p {
     background-color: $brandGreen;
   }
 }
+.inverted {
+  display: inline-block;
+  text-align: center;
+  width: 190px;
+  padding: 10px 40px;
+  margin-top: 25px;
+  color: white;
+  border: 2px solid $brandGreen;
+  background-color: $brandGreen;
+  transition: color 0.4s, background-color 0.4s;
+  &:hover {
+    color: $brandGreen;
+    background-color: white;
+  }
+}

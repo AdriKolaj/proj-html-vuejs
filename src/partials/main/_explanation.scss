@@ -109,9 +109,95 @@ $rightTxtPadding: 15px 20px 15px 0;
       }
     }
     // /Right TxT Part
+    .centered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-
+    .testimonial {
+      padding: 25px 45px;
+      width: 90%;
+      border-radius: 5px;
+      box-shadow: 0px 0px 30px -10px rgba(0,0,0, 0.40);
+      .bold-p {
+        font-size: 18px;
+      }
+      p {
+        margin: 15px 0 35px;
+        font-size: 16px;
+      }
+      .testimonial-profile {
+        display: flex;
+        img {
+          height: 70px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+        .test-infos {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .testimonial-name {
+          font-size: 15px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        .testimonial-job {
+          color: $brandGrey;
+        }
+      }
+    }
+    .testimonial.main {
+      position: relative;
+      background-color: white;
+    }
+    .testimonial.behind {
+      padding: 20px 35px;
+      width: 70%;
+      position: absolute;
+      right: 45%;
+      transform: translateX(50%);
+      z-index: -1;
+      opacity: 0.4;
+    }
+    .behind.top {
+      top: -80px;
+      .bold-p {
+        font-size: 14px;
+      }
+      p {
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    }
+    .behind.bottom {
+      bottom: -55px;
+      img {
+        height: 50px;
+      }
+      .testimonial-name {
+        font-size: 13px;
+      }
+      .testimonial-job {
+        font-size: 12px;
+      }
+    }
   }
 
+
+  #testimonals {
+    margin-top: 140px;
+  }
+  #sixth {
+    margin: 150px 0;
+    .image-section {
+
+    }
+    .main-img {
+      height: 90%;
+    }
+  }
 
 }
