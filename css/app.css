@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -383,7 +384,29 @@ nav #right-nav span i:hover {
   margin-top: 140px;
 }
 #main-section #sixth {
-  margin: 150px 0;
+  margin: 120px 0;
+}
+#main-section #sixth .image-section  {
+  width: 60%;
+}
+#main-section #sixth .shape-square {
+  right: 335px;
+  bottom: -50px;
+}
+#main-section #sixth .circle-shape {
+  right: -5px;
+}
+#main-section #sixth .shape-oval-dot {
+  top: 150px;
+  left: -75px;
+}
+#main-section #sixth .shape-lines {
+  position: absolute;
+  bottom: 15px;
+  left: -260px;
+}
+#main-section #sixth .text-section {
+  width: 40%;
 }
 #main-section #sixth .main-img {
   height: 90%;

@@ -185,15 +185,33 @@ $rightTxtPadding: 15px 20px 15px 0;
       }
     }
   }
-
-
   #testimonals {
     margin-top: 140px;
   }
-  #sixth {
-    margin: 150px 0;
-    .image-section {
 
+  #sixth {
+    margin: 120px 0;
+    .image-section {
+      width: 60%;
+    }
+    .shape-square {
+      right: 335px;
+      bottom: -50px;
+    }
+    .circle-shape {
+      right: -5px;
+    }
+    .shape-oval-dot {
+      top: 150px;
+      left: -75px;
+    }
+    .shape-lines {
+      position: absolute;
+      bottom: 15px;
+      left: -260px;
+    }
+    .text-section {
+      width: 40%;
     }
     .main-img {
       height: 90%;
