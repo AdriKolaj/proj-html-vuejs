@@ -65,6 +65,7 @@ $rightTxtPadding: 15px 20px 15px 0;
       .main-img {
         position: relative;
         height: 90%;
+        overflow: hidden;
         &:hover {
           cursor: pointer;
         }
@@ -106,6 +107,13 @@ $rightTxtPadding: 15px 20px 15px 0;
         left: -65px;
         z-index: 1;
         color: blue;
+      }
+      .yt-video {
+        transform: scale(1);
+        transition: 1s ease-out;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
     // /Right TxT Part

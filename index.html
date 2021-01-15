@@ -88,7 +88,7 @@
             <div class="explanation">
               <div class="image-section left-img">
                 <div class="main-img">
-                  <img class="image"src="img/stock-full-hd-11-670x450.jpg" alt="work culture">
+                  <img class="image yt-video"src="img/stock-full-hd-11-670x450.jpg" alt="work culture">
                   <img class="yt-btn" src="img/icon-youtube-play.png" alt="">
                 </div>
                 <img class="shape-square" src="img/maxcoach-shape-07.png" alt="shape">
@@ -287,8 +287,8 @@
                 <h2>Subscribe <span class="special-title">Newsletters</span></h2>
                 <p>Enter your email address to register to our newletter subscription delivered on a regular basis!</p>
                 <div class="search">
-                  <input type="email-enter" name="email" placeholder="Enter your email">
-                  <span>Subscribe</span>
+                  <input @keydown.enter="sendEmail" type="email-enter" name="email" placeholder="Enter your email" v-model="newsletterMail">
+                  <span @click="sendEmail">Subscribe</span>
                 </div>
               </div>
               <div class="circle-shape"></div>
@@ -342,6 +342,9 @@
         </div>
       </footer>
       <!-- /Footer section -->
+      <div id="to-top">
+        <a href="#root"><i class="fas fa-arrow-up"></i></a>
+      </div>
     </div>
     <script src="js/main.js" charset="utf-8"></script>
   </body>

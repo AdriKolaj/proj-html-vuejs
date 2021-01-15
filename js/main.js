@@ -101,7 +101,18 @@ var app = new Vue ({
         link: "linkedin.html",
         icon: "fab fa-linkedin"
       }
-    ]
+    ],
+    newsletterMail: '',
+    usersMails: [],
+  },
+
+  methods: {
+    sendEmail() {
+      if(this.newsletterMail != '') {
+        this.usersMails.push(this.newsletterMail);
+        this.newsletterMail = ""
+      }
+    }
   }
 
 })

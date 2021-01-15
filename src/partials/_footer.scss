@@ -22,6 +22,7 @@ footer {
   padding: $footerVPadding;
   color: $footerGrey;
   background-color: $footerBackground;
+  font-weight: 500;
   a {
     transition: color 0.4s;
     &:hover{

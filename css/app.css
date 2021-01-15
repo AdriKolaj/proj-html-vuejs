@@ -87,6 +87,36 @@ p {
   background-color: white;
 }
 
+#to-top {
+  position: fixed;
+  display: inline-block;
+  bottom: 20px;
+  right: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: #1fad95;
+  font-size: 20px;
+  border: 3px solid #1fad95;
+  transition: color 0.4s, background-color 0.4s;
+}
+#to-top a {
+  height: 100%;
+  width: 100%;
+}
+#to-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#to-top:hover {
+  cursor: pointer;
+  color: #1fad95;
+  background-color: white;
+}
+
 nav {
   position: relative;
   display: flex;
@@ -264,6 +294,7 @@ nav #right-nav span i:hover {
 #main-section .explanation .left-img .main-img {
   position: relative;
   height: 90%;
+  overflow: hidden;
 }
 #main-section .explanation .left-img .main-img:hover {
   cursor: pointer;
@@ -305,6 +336,13 @@ nav #right-nav span i:hover {
   left: -65px;
   z-index: 1;
   color: blue;
+}
+#main-section .explanation .left-img .yt-video {
+  transform: scale(1);
+  transition: 1s ease-out;
+}
+#main-section .explanation .left-img .yt-video:hover {
+  transform: scale(1.1);
 }
 #main-section .explanation .centered {
   display: flex;
@@ -633,6 +671,7 @@ nav #right-nav span i:hover {
 }
 .search input {
   padding: 10px 15px;
+  width: 500px;
   border: none;
   background-color: #F5F5F5;
 }
@@ -720,6 +759,7 @@ footer {
   padding: 40px 0;
   color: #696969;
   background-color: #181722;
+  font-weight: 500;
 }
 footer a {
   transition: color 0.4s;
