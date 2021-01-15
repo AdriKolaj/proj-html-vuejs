@@ -1,0 +1,66 @@
+#cta-newsletter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+
+  p {
+    font-weight: 500;
+  }
+
+  .shape-square-rot {
+    position: absolute;
+    height: 140px;
+    top: 50px;
+    right: 0px;
+  }
+  .circle-shape {
+    position: absolute;
+    border-color: #8FD6CA;
+    left: -90px;
+    bottom: 40px;
+  }
+  .shape-circle-dot {
+    position: absolute;
+    height: 80px;
+    top: 130px;
+    right: 0px;
+  }
+}
+.news-container {
+  width: 40%;
+  text-align: center;
+}
+
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: $inputColor;
+  overflow: hidden;
+
+  input {
+    padding: 10px 15px;
+    border: none;
+    background-color: $inputColor;
+    &:focus {
+      outline: none;
+    }
+  }
+  span {
+    padding: 10px 30px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid $brandGreen;
+    background-color: $brandGreen;
+    transition: background-color 0.4s, color 0.4s;
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      color: $brandGreen;
+    }
+  }
+}

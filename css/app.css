@@ -550,6 +550,109 @@ nav #right-nav span i:hover {
   border-radius: 80%;
 }
 
+#latest-blog .card {
+  height: 370px;
+  background-color: transparent;
+}
+#latest-blog .card-txt {
+  padding: 10px 0 20px;
+}
+#latest-blog .category {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: darkgrey;
+  font-size: 13px;
+}
+#latest-blog .bold-p {
+  margin-bottom: 5px;
+}
+#latest-blog .other-infos {
+  left: 0;
+}
+
+#latest-blog {
+  padding-bottom: 50px;
+  background-color: #F6F6F6;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+#latest-blog:after {
+  content: "";
+  background-color: #F6F6F6;
+  position: absolute;
+  height: 640px;
+  bottom: 0px;
+  width: 3200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
+}
+
+#cta-newsletter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+#cta-newsletter p {
+  font-weight: 500;
+}
+#cta-newsletter .shape-square-rot {
+  position: absolute;
+  height: 140px;
+  top: 50px;
+  right: 0px;
+}
+#cta-newsletter .circle-shape {
+  position: absolute;
+  border-color: #8FD6CA;
+  left: -90px;
+  bottom: 40px;
+}
+#cta-newsletter .shape-circle-dot {
+  position: absolute;
+  height: 80px;
+  top: 130px;
+  right: 0px;
+}
+
+.news-container {
+  width: 40%;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+.search input {
+  padding: 10px 15px;
+  border: none;
+  background-color: #F5F5F5;
+}
+.search input:focus {
+  outline: none;
+}
+.search span {
+  padding: 10px 30px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #1fad95;
+  background-color: #1fad95;
+  transition: background-color 0.4s, color 0.4s;
+}
+.search span:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1fad95;
+}
+
 main .container {
   margin: 0 auto;
   padding: 120px 0 80px 0;

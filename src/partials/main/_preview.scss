@@ -3,13 +3,14 @@ $cardsWidth: 31%;
 $cardsPadding: 20px 0px;
 $cardTxtPadding: 10px 20px 20px;
 $cardHeight: 380px;
+$cardBlogHeight: 370px;
+$cardTxtBlogPadding: 10px 0 20px;
 
 .preview {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: $previewVPadding;
-  // background-color: #F6F6F6;
 
   & .CTA {
     width: 40%;
@@ -124,7 +125,7 @@ $cardHeight: 380px;
 }
 .stripe:before {
     content:"";
-    background-image: linear-gradient(180deg, white, #F6F6F6);
+    background-image: linear-gradient(180deg, white, $brandLightGrey);
     position: absolute;
     height: 600px;
     bottom: 0;
@@ -133,4 +134,44 @@ $cardHeight: 380px;
     transform: translateX(-50%);
     z-index: -2;
     border-radius: 80%;
+}
+
+#latest-blog {
+  .card {
+    height: $cardBlogHeight;
+    background-color: transparent;
+  }
+  .card-txt {
+    padding: $cardTxtBlogPadding;
+  }
+  .category {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: darkgrey;
+    font-size: 13px;
+  }
+  .bold-p {
+    margin-bottom: 5px;
+  }
+  .other-infos {
+    left: 0;
+  }
+}
+
+#latest-blog {
+  padding-bottom: 50px;
+  background-color: $brandLightGrey;
+  position: relative;
+  padding-bottom: 30px;
+}
+#latest-blog:after {
+    content:"";
+    background-color: $brandLightGrey;
+    position: absolute;
+    height: 640px;
+    bottom: 0px;
+    width: 3200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
 }
